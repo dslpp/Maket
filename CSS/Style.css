@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(../Fonts/Montserrat-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: "Garamond";
+    src: url(../Fonts/CormorantGaramond.otf) format('opentype');
+}
+body{
+    margin: 0;
+    background-color:rgba(225, 225, 225, 0.566);
+}
+a{ color: black;
+    font-family: "Montserrat";
+    text-decoration: none;
+
+
+ 
+}
+
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto;
+    grid-template-areas: "A A"/*1*/
+                         "B B"/*3*/
+                         "C D"/*4 5*/
+                         "E F"/*6 7*/
+                         "G G"/*8*/
+                         "H H" /*9*/
+                         "I I"/*10*/
+                         "J J"/*11*/
+                         "K K"/*12*/
+                         "L L"/*13*/
+                         "M M"/*14*/
+                         "N N";/*15*/
+  
+}
+.header{
+    grid-area: A;
+   background-color:white;
+    display: grid;
+
+ 
+}
+.menu{  
+    display: grid; 
+    grid-template-columns: 15% 17% 17% 17% 17% 17%;
+}
