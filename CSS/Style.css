@@ -1,49 +1,620 @@
 @font-face {
     font-family: "Montserrat";
+    src: url(../Fonts/Montserrat-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: "MontserratL";
     src: url(../Fonts/Montserrat-Light.ttf) format('truetype');
 }
 @font-face {
     font-family: "Garamond";
-    src: url(../Fonts/CormorantGaramond.otf) format('opentype');
+    src: url(../Fonts/CormorantInfant-Regular.otf) format('opentype');
 }
 body{
     margin: 0;
-    background-color:rgba(225, 225, 225, 0.566);
+    background-color:rgba(248, 248, 248, 0.566);
+    user-select: none;
+    -webkit-user-drag: none;
+    }
+img{
+    -webkit-user-drag: none; 
 }
 a{ color: black;
     font-family: "Montserrat";
     text-decoration: none;
-
-
- 
+    -webkit-user-drag: none;
 }
-
+#a{
+    grid-column-start: 2 ;
+}
+#linka{
+    color:rgba(183, 119, 190, 1);
+    letter-spacing: 0;
+}
 .grid-container{
     display: grid;
     height: 100vh;
     grid-template-rows: auto;
     grid-template-areas: "A A"/*1*/
                          "B B"/*3*/
-                         "C D"/*4 5*/
-                         "E F"/*6 7*/
-                         "G G"/*8*/
-                         "H H" /*9*/
-                         "I I"/*10*/
-                         "J J"/*11*/
-                         "K K"/*12*/
-                         "L L"/*13*/
-                         "M M"/*14*/
-                         "N N";/*15*/
-  
+                         "C C"/*4 5*/
+                         "D D"/*6 7*/
+                         "E E"/*8*/
+                         "F F" /*9*/
+                         "G G"/*10*/
+                         "H H"/*11*/
+                         "I I"/*12*/
+                         "J J"/*13*/
+                         "K K"/*14*/
+                         "L L";/*15*/
+    overflow-x: hidden;
 }
 .header{
     grid-area: A;
    background-color:white;
     display: grid;
+    font-family: "Montserrat";
+    font-style: normal;
+} 
+.banner{
+    grid-area: B;
+    background-color: rgb(246, 240, 252);
+}
+.filter{
+    grid-area: C D;
+}
+.Lifetime{
+    grid-area: E;
+}
+.diler{
+    grid-area: F;
+}
+.footer{
+    grid-area: L;
+}
+@media (min-width: 1366px) {
+    .header{
+        height: 18vh;
+        grid-template-rows: 85% 10%;
+        grid-template-columns: 33% 42% 25%;
+    } 
+       .menu{  
+        font-size: 1.5vh;
+        letter-spacing: 0.2em;
+        display: grid; 
+        grid-template-columns: 15% 17% 17% 17% 17% 17%;
+        grid-column-start: span 3;
 
- 
+    }
+    .region{
+        grid-row-start: 1;
+        display: grid;
+        grid-template-rows: auto;
+        letter-spacing: 0.1em;
+        width: 25vw;
+        grid-template-areas: "city textdiler";
+        padding: 4vh 0 0 5vw;
+        font-size: 1.2vh;
+    }
+    #place{
+        width: 2.5vw;
+        height: 2.5vh;
+    }
+    #logodiv{
+       width: 12vw;
+        display: grid;
+        grid-row-start: 1;
+        grid-template-columns: 33% 33% 33%;
+    }
+    #logo{
+        height: 10vh;
+        padding-top: 2vh;
+        padding-left: 10vw;
+    }    
+    #city{
+        grid-area: city;
+        grid-column-start: 1;
+        padding-top: 1.3vh;
+    }
+    #textdiler{
+        padding: 0.3vh 0 0 1vw;
+        grid-area: textdiler;
+        grid-column-start: 2;
+        font-size: 1.5vh;
+  }
+    #plink{
+    font-size: 1.5vh;
+    grid-column-start: 1;
+    letter-spacing: 0;
+    text-align: right;
+    margin-top: -2vw;
+}
+    #linka:hover{
+    text-decoration: underline;
+    }
+    #linka:active{
+        font-weight: bold;
+        text-decoration: none;
+    }
+    i{
+        font-style: normal;
+        font-size: 2vh;
+    }
+    #social{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        display: grid;
+        width:23vw;
+        grid-template-columns:10% 10% 10%;
+        padding-top: 1vh;
+        padding-left: 1vw;
+    }
+    #telegram{display: grid;
+        grid-column-start: 1;
+        height: 2.4vh;
+        width: 2.4vw;
+    }
+    #viber{
+        display: grid;
+        grid-column-end: 3;
+        height: 2.4vh;
+        width: 2.4vw;
+    }
+    #whatsapp{
+        grid-column-start: 3;
+        height: 2.4vh;
+        width: 2.4vw;
+    }
+    #contacts{ 
+        grid-column-start: 3;
+        grid-row-start: 1;
+        display: grid;
+       width: 23vw;
+        grid-template-columns: 16vw 7vw;
+        font-size: 2vh;
+        padding-top: 4vh;
+        letter-spacing: 0.2em;
+        text-align: right;
+    }
+    .banner
+    {   display: grid;
+       width: 93vw;
+       height: 70vh;
+       padding: 7vh;
+       font-family: "Garamond";
+       grid-template-columns: 55vw 45vw;
+    } 
+    #glassstone{
+        margin: 0;
+        padding: 0;
+        grid-column-start: 2;
+        height: 58vh;
+        width: 40vw;  
+    }
+    #textstone{
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-size: 7.1vh;
+        padding: 11vh 0vh 0vh 7vw;
+    }
+    #diler{
+        display: grid;
+        grid-column-start: 1;
+        margin: 0;
+        letter-spacing: 0.1em;
+        text-transform:lowercase ;
+        font-size: 6vh;
+    }
+    #description{
+        display: grid;
+        grid-template-columns: 14vw 14vw 14vw;
+        grid-template-rows: 2vh 10vh;
+        padding-top: 8vh;
+    }
+    #line1{ 
+        display: grid;
+        grid-column-start: 1;
+    }
+    #line2{
+        display: grid;
+        grid-column-start: 2;
+    }
+    #line3{
+        display: grid;
+        grid-column-start: 3;
+    }
+    #color{
+        font-family: "MontserratL";
+        font-size: 2vh;
+        letter-spacing: 0;
+        text-transform: none;
+        font-style: light;
+    }
+    #garant{   font-family: "MontserratL";
+        font-size: 2vh;
+        letter-spacing: 0;
+        text-transform: none;
+        font-style: light;}
+    #variant{   font-family: "MontserratL";
+        font-size: 2vh;
+        letter-spacing: 0;
+        text-transform: none;
+        font-style: light;}
+    #button{
+        background: linear-gradient(265.97deg, #c982d1 -9.18%, #88488F 103.05%);
+        margin-top:3.5vh;
+        display: grid;
+        grid-column-start: 1;
+        height: 6vh;
+        width: 13vw;
+        grid-template-columns:11vw 2vw;
+        cursor: pointer;
+    }
+    #arrow{
+     grid-column-start: 2;
+     padding-top: 2vh;
+     height: 2vh;
+    }
+    #catalog{
+        color:white;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-family: "Montserrat";
+        font-size: 1.3vh;
+        padding-top: 2.3vh;
+        padding-left: 2vh;
+    }
+    #button:hover{
+        background: linear-gradient(265.97deg,#88488F -9.18%, #c982d1 103.05%);
+    }
+    #button:active{
+        background: #88488F;
+    }
+    .interior{
+        display: grid;
+        grid-template-columns: 45vw 55vw;
+        height: 70vh;
+        padding-top: 10vh;
+    }
+    #newimage{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 15vh 15vh 40vh;
+        padding-left: 7vw;
+    }
+    #newtrand{
+        margin: 0;
+        font-family:"Garamond";
+        font-weight: normal;
+        letter-spacing: 0.03em;
+        padding-top: 2vh;
+        font-size: 4.5vh;
+        padding-right: 5vw;
+    }
+    #home{
+        font-family: "MontserratL";
+        font-size: 2vh;
+        padding-right: 8vw;
+    }
+    #photo{
+        height: 70vh;
+        width: 55vw;
+    }
+    #imginterior{
+        height: 15vh;
+        width: 12.5vw;
+        }
+    .filter{
+        height: 220vh;
+        width: 100vw;
+        background-image: url(/Image/filter.png);
+        background-size: cover;
+    }
+    .kinds{
+        height: 60vh;
+        display: grid;
+        grid-template-columns: 27vw 15vw 40vw;
+        margin: 10vh 0  0 7vw;
+   }
+    #kindsalways{
+        display: grid;
+        width: 27vw;
+        grid-template-columns: 5vw 22vw;
+        grid-template-rows: 20vh 10vh 10vh 10vh; 
+    }
+    #kindstext{
+        display: grid;
+        grid-column-start: span 2;
+        font-family:"Garamond";
+        font-weight: normal;
+        letter-spacing: 0.03em;
+        font-size: 4.5vh;
+    }
+    #textkind{
+        font-family: "MontserratL";
+        letter-spacing: 0;
+        font-size: 2vh;
+    }
+    #framekinds{
+        height: 5vh;
+        width: 5vw;
+        padding-top: 1.5vh;
+    }
+    #glass{
+        display: grid;
+        grid-column-start: 3;
+        background-image: url(/Image/glass.png);
+        background-size: 100% 100%;
+    }
+    .cards{ 
+        margin-top: 20vh;
+        display: grid;
+        height: 36vh;
+        width: 72vw;
+        margin-left: 7vw;
+        grid-template-columns: 17vw 0.2vw 17vw 0.2vw 17vw 0.2vw 17vw;
+    }
+    #card1{
+        box-shadow: 0 14px 28px rgba(224, 198, 215, 0.581);
+        background-color: white;
+        border: 1px solid #F4F4F4;
+        display: grid;
+        grid-column-start: 1;
+        grid-template-rows: 3vh 23vh 1vh 4vh 2.5vh 2.5vh;
+    }
+    #card2{
+        box-shadow: 0 14px 28px rgba(224, 198, 215, 0.581);
+        background-color: white;
+        border: 1px solid #F4F4F4;
+        display: grid;
+        grid-column-start: 3;
+        grid-template-rows: 3vh 23vh 1vh 4vh 2.5vh 2.5vh;
+    }
+    #card3{
+        box-shadow: 0 14px 28px rgba(224, 198, 215, 0.581);
+        background-color: white;
+        border: 1px solid #F4F4F4;
+        display: grid;
+        grid-column-start: 5;
+        grid-template-rows: 3vh 23vh 1vh 4vh 2.5vh 2.5vh;
+    }
+    #card4{
+        box-shadow: 0 14px 28px rgba(224, 198, 215, 0.581);
+        background-color: white;
+        border: 1px solid #F4F4F4;
+        display: grid;
+        grid-column-start: 7;
+        grid-template-rows: 3vh 23vh 1vh 4vh 2.5vh 3vh;
+    }
+    #card1:hover{
+        background:#F4F4F4 ;
+    }
+    #card2:hover{
+        background:#F4F4F4 ;
+    }
+    #card3:hover{
+        background:#F4F4F4 ;
+    }
+    #card4:hover{
+        background:#F4F4F4 ;
+    }
+    #hit{
+        padding: 0.5vh 0  0 0.5vw;
+        height: 2.5vh;
+        width: auto;
+    }
+    #row2{
+        display: grid;
+        grid-row-start: 2;
+        padding-left: 3.6vw;
+        height: 20vh;
+        width: 10vw;
+    }
+    #row3{
+        display: grid;
+        grid-row-start: 3;
+        padding-left: 5.7vw;
+        height: 0.2vh;
+        width: 6vw;
+    }
+    #row4{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-row-start: 4;
+        text-align: center;
+        font-family:"Montserrat" ;
+        font-size: 2vh;
+    }
+    #row5{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-row-start: 5;
+        text-align: center;
+        font-family:"Montserrat" ;
+        font-size: 1.5vh;
+        text-decoration: line-through;
+        color: rgb(194, 194, 194);
+    }
+    #row6{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-row-start: 6;
+        text-align: center;
+        font-family:"Montserrat" ;
+        font-size: 2vh;
+        color: #c982d1;
+    }
+    .buttoncatalog{
+        border: rgba(183, 119, 190, 0.6);
+        border-style:solid;
+        border-width: 0.2vh;
+        margin-top:8vh;
+        margin-left: 27vw;
+        display: grid;
+        grid-column-start: 1;
+        height: 6vh;
+        height: 6vh;
+        width: 13vw;
+        grid-template-columns:11vw 2vw;
+        cursor: pointer;
+    }
+    #catalogbtn{
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-family: "Montserrat";
+        font-size: 1.3vh;
+        padding-top: 2.3vh;
+        padding-left: 2vh;
+    }
+   .buttoncatalog:hover{
+    border-width: 0.3vh;
+   }
+   .buttoncatalog:active{
+    border-width: 0.3vh;
+    background-color: rgba(183, 119, 190, 0.1);
+    border-color: rgba(183, 119, 190, 0.6);
+   }
+   .Lifetime{
+    height: 85vh;
+    width: 100vw;
+    background-image: url(/Image/Vector3.png);
+    background-size:100vw 85vh;
+    background-position: -15vh 0 0 0 ;
+    display: grid;
+    grid-template-columns: 15vw 33vw 20vw 15vw;
+    grid-template-rows: 6vh 10vh  18vh 20vh 20vh ;
+   }
+   #life{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin: 0;
+    font-family:"Garamond";
+    font-weight: normal;
+    padding-top: 2vh;
+    font-size: 4.5vh;
+    padding-right: 5vw;
+    grid-row-start: 1;
+   }
+    #moreyear{
+        display: grid;
+        grid-column-start:4 ;
+        grid-row-start: 1;
+    }
+    #degrees{
+        font-family: "MontserratL";
+        font-size: 1.8vh;
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding-top: 1.5vh;
+        grid-row-start: 2;
+    }
+    #stonearea{
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        height: 50vh;
+        width: 30vw;
+        grid-row-start: 3;
+    }
+    #stoneglass{
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        height: 45vh;
+        width: 30vw;
+        padding: 25vh 0vw 0vh 8vw;
+    }
+    #linetext{
+        height: 1vh;
+        width: 6vw;
+    }
+    #eco{
+        display: grid;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-template-columns: 28vw;
+        grid-template-rows: 1.5vh 4vh 10vh;
+        font-family: "Montserrat";
+        font-size: 2vh;
+       
+    }
+    #newp{
+        margin: 0;
+        padding: 0;
+        font-size: 1.7vh;
+        color: #6A6A6A;
+    }
+    #wheather{
+        display: grid;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start:4 ;
+        grid-template-columns: 28vw;
+        grid-template-rows: 1.5vh 6vh 10vh;
+        font-family: "Montserrat";
+        font-size: 2vh;
+    }
+    #easy{
+        display: grid;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start:5 ;
+        grid-template-columns: 28vw;
+        grid-template-rows: 1.5vh 5vh 10vh;
+        font-family: "Montserrat";
+        font-size: 2vh;
+    }
+    .diler{
+       background-color: #F3F3F6;
+        height: 50vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 20vw 30vw 30vw 15vw;
+        grid-template-rows: 15vh 10vh;
+        padding-top: 4vh;
+    }
+    #hbuy{
+        letter-spacing: 0.03em;
+        display: grid;
+        grid-column: 2/4;
+        font-family:"Garamond";
+        font-size: 5vh;
+        font-weight:normal ;
+        text-align: center;
+    }
+    #nonep{
+        display: grid;
+        grid-column: 2/4;
+        grid-row: 2;
+        font-family: "Montserrat";
+        font-size: 2.3vh;
+        padding-top: 1vh;
+        text-align: center;
+    }
+    #addressdiler{
+
+    }
+    #whantdiler{
+        
+    }
+    
+}
+@media (min-width:320px) and (max-width:768px) {
+   .grid-container{
+    overflow-x: hidden;
+   }
+.header{
+    grid-template-rows: repeat(5%);
 }
 .menu{  
     display: grid; 
-    grid-template-columns: 15% 17% 17% 17% 17% 17%;
+    grid-template-rows: repeat(5%);
+}
 }
