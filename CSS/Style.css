@@ -307,7 +307,7 @@ a{ color: black;
     .filter{
         height: 220vh;
         width: 100vw;
-        background-image: url(/Image/filter.png);
+        background-image: url(../Image/filter.png);
         background-size: cover;
     }
     .kinds{
