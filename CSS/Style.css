@@ -894,10 +894,7 @@ a{ color: black;
         padding: 0;
         position: relative;
         overflow-x: hidden;
-
-      
       }
-      
       .menu-btn span {
         width: 10vw;
         height: 0.25vh;
@@ -941,6 +938,7 @@ a{ color: black;
         transform: translateX(-50%);
         transition: transform 0.5s;
         -webkit-transform: translateX(100vw);
+
   
     }
     .menum.active {
@@ -949,15 +947,25 @@ a{ color: black;
         -moz-transform: translateX(100);
         -ms-transform: translateX(100);
         -o-transform: translateX(100);
+        display: grid;
+        grid-template-rows: 70vh 10vh;
+
+    }
+    nav{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row:1;
     }
     .menum .ul{
         padding-left: 16vw;
+    
     }
     .menum li {
         list-style-type: none;
         font-family: "Montserrat";
         line-height:4.5vh;
         font-size: 2.5vh;
+       
     }
     #logodiv{
         display: grid;
@@ -971,11 +979,38 @@ a{ color: black;
         font-weight:1000;
         letter-spacing: 0.05em;
         margin: 4vh ;
+    
     }
+    #social{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        display: grid;
+        width:23vw;
+        grid-template-columns:10vw 10vw 10vw;
+
+        padding-left: 1vw;
+    }
+    #telegram{display: grid;
+        grid-column-start: 1;
+        height: 10vh;
+        width: 5.5vw;
+    }
+    #viber{
+        display: grid;
+        grid-column-end: 3;
+        height: 10vh;
+        width: 5.5vw;
+    }
+    #whatsapp{
+        grid-column-start: 3;
+        height: 10vh;
+        width: 5.5vw;
+    }
+
     i{
         display: grid;
         font-style: normal;
-        font-size: 2vh;
+        font-size: 2.5vh;
         text-align: center;
         grid-column-start: 2;
     }
