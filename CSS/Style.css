@@ -15,7 +15,7 @@ body{
     background-color:rgba(248, 248, 248, 0.566);
     user-select: none;
     -webkit-user-drag: none;
-    position: fixed;
+
     }
 .body_hide {        
         opacity: 0;
