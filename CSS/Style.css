@@ -15,6 +15,7 @@ body{
     background-color:rgba(248, 248, 248, 0.566);
     user-select: none;
     -webkit-user-drag: none;
+    position: fixed;
     }
 .body_hide {        
         opacity: 0;
@@ -893,6 +894,7 @@ a{ color: black;
         padding: 0;
         position: relative;
         overflow-x: hidden;
+
       
       }
       
@@ -934,10 +936,12 @@ a{ color: black;
     .menum {
         width: 100vw;
         height: 100vh;
+
         background: #ffffff;
         transform: translateX(-50%);
         transition: transform 0.5s;
         -webkit-transform: translateX(100vw);
+  
     }
     .menum.active {
         transform: translateX(100);
@@ -1037,6 +1041,8 @@ a{ color: black;
     height: 16vh;
     grid-template-columns: 80vw 20vw;
     grid-template-rows: 5vh  5vh 5vh;
+    position: relative;
+
 }
 .region{
     display: none;
