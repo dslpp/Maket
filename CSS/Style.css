@@ -13,17 +13,7 @@
 body{
     margin: 0;
     background-color:rgba(248, 248, 248, 0.566);
-    user-select: none;
-    -webkit-user-drag: none;
-
-    }
-.body_hide {        
-        opacity: 0;
-        transition: .9s opacity ease-in-out;
-    }
-    .body_visible {
-        opacity: 1;
-    }
+}
     ::-webkit-scrollbar {
         width: 10px; /* ширина для вертикального скролла */
         height: 5px; /* высота для горизонтального скролла */
@@ -38,7 +28,7 @@ body{
         -moz-border-radius: 5em;
         -ms-border-radius: 5em;
         -o-border-radius: 5em;
-}
+    }
     
     ::-webkit-scrollbar-thumb:hover {
         background-color: #8e1469;
@@ -76,9 +66,6 @@ body{
       .loaded .preloader {
         display: none;
       }
-img{
-    -webkit-user-drag: none; 
-}
 a{ color: black;
     font-family: "Montserrat";
     text-decoration: none;
@@ -92,6 +79,10 @@ a{ color: black;
     letter-spacing: 0;
 }
 .grid-container{
+    opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.grid-container_visible{
     display: grid;
     height: 100vh;
     grid-template-rows: auto;
@@ -109,6 +100,8 @@ a{ color: black;
                          "L L";/*12*/
     overflow-x: hidden;
     position: relative;
+    opacity: 1;
+  
 }
 .header{
     grid-area: A;
@@ -1031,7 +1024,7 @@ a{ color: black;
     .banner
     {   display: grid;
        width: 100vw;
-       height: 40vh;
+       height: 45vh;
        padding: 1vh 0 0 2vw;
        font-family: "Garamond";
        grid-template-columns: 55vw 55vw;
@@ -1069,6 +1062,36 @@ a{ color: black;
         text-transform:lowercase ;
         font-size: 3vh;
     }
+    #button{
+        background: linear-gradient(265.97deg, #c982d1 -9.18%, #88488F 103.05%);
+        margin-top:8vh;
+        display: grid;
+        grid-column-start: 1;
+        height: 6vh;
+        width: 50vw;
+        grid-template-columns:45vw 5vw;
+        cursor: pointer;
+    }
+    #arrow{
+     grid-column-start: 2;
+     padding-top: 2vh;
+     height: 2vh;
+    }
+    #catalog{
+        color:white;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-family: "Montserrat";
+        font-size: 1.5vh;
+        padding-top: 2.3vh;
+        padding-left: 2vw;
+    }
+    #button:hover{
+        background: linear-gradient(265.97deg,#88488F -9.18%, #c982d1 103.05%);
+    }
+    #button:active{
+        background: #88488F;
+    }
     
     
 .header{
@@ -1087,5 +1110,555 @@ a{ color: black;
 }
 #contacts{
     display: none;
+}
+
+.interior{
+    display: grid;
+    height: 85vh;
+    padding-top: 10vh;
+    grid-template-rows: 20vh  15vh 50vh;
+}
+#newimage{
+    display: grid;
+
+    padding-left: 7vw;
+}
+#newtrand{
+    margin: 0;
+    font-family:"Garamond";
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    padding-top: 2vh;
+    font-size: 4.5vh;
+    padding-right: 5vw;
+    grid-row: 1;
+    text-align: center;
+}
+#home{
+    font-family: "MontserratL";
+    font-size: 2vh;
+    padding-right: 8vw;
+    grid-row: 2;
+    text-align: center;
+}
+#photo{
+    display: grid;
+    height: 50vh;
+    width: 100vw;
+}
+#foto{
+    display: grid;
+grid-row: 3;}
+#imginterior{
+    height: 15vh;
+    width: 12.5vw;
+    display: none;
+    }
+.filter{
+    height: 300vh;
+    width: 100vw;
+    background-image: url(../Image/filter.png);
+    background-size: cover;
+}
+.kinds{
+    height: 80vh;
+    display: grid;
+    margin: 10vh 0  0 7vw;
+    grid-template-rows: 15vh 32vh 35vh;
+    width: 100vw;
+}
+#kindsalways{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 10vw 80vw;
+    grid-template-rows: 20vh 10vh 10vh 10vh; 
+
+}
+#kindstext{
+    display: grid;
+    grid-column-start: span 2;
+    font-family:"Garamond";
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    font-size: 4.5vh;
+    text-align: center;
+}
+#textkind{
+    font-family: "MontserratL";
+    letter-spacing: 0;
+    font-size: 2vh;
+}
+#framekinds{
+    height: 6vh;
+    width: 6vw;
+    padding-top: 0.5vh;
+}
+#glass{
+    display: grid;
+    grid-row: 3;
+    background-image: url(/Image/glass.png);
+    background-size: 100% 100%;
+}
+.cards{ 
+    margin-top: 70vh;
+    display: grid;
+    height: 80vh;
+    width: 100vw;
+    grid-template-columns: 42.5vw 0.5vw 43vw;
+    grid-template-rows: 39.5vh 0.5vh 40vh;
+}
+#card1{
+    box-shadow: 0 14px 28px rgba(224, 198, 215, 0.581);
+    background-color: white;
+    border: 1px solid #F4F4F4;
+    display: grid;
+    grid-column-start: 1;
+    grid-template-rows: 3vh 23vh 1vh 4vh 2.5vh 2.5vh;
+}
+#card2{
+    box-shadow: 0 14px 28px rgba(224, 198, 215, 0.581);
+    background-color: white;
+    border: 1px solid #F4F4F4;
+    display: grid;
+    grid-column-start: 3;
+    grid-template-rows: 3vh 23vh 1vh 4vh 2.5vh 2.5vh;
+}
+#card3{
+    box-shadow: 0 14px 28px rgba(224, 198, 215, 0.581);
+    background-color: white;
+    border: 1px solid #F4F4F4;
+    display: grid;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-template-rows: 3vh 23vh 1vh 4vh 2.5vh 2.5vh;
+}
+#card4{
+    box-shadow: 0 14px 28px rgba(224, 198, 215, 0.581);
+    background-color: white;
+    border: 1px solid #F4F4F4;
+    display: grid;
+    grid-column-start: 3;
+    grid-row-start: 3;
+    grid-template-rows: 3vh 23vh 1vh 4vh 2.5vh 3vh;
+}
+#card1:hover{
+    background:#F4F4F4 ;
+}
+#card2:hover{
+    background:#F4F4F4 ;
+}
+#card3:hover{
+    background:#F4F4F4 ;
+}
+#card4:hover{
+    background:#F4F4F4 ;
+}
+#hit{
+    padding: 0.5vh 0  0 0.5vw;
+    height: 2.5vh;
+    width: auto;
+}
+#row2{
+    display: grid;
+    grid-row-start: 2;
+    padding-left: 3.6vw;
+    height: 20vh;
+    width: 35vw;
+}
+#row3{
+    display: grid;
+    grid-row-start: 3;
+    padding-left: 5.7vw;
+    height: 0.2vh;
+    width: 30vw;
+}
+#row4{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-row-start: 4;
+    text-align: center;
+    font-family:"Montserrat" ;
+    font-size: 2vh;
+}
+#row5{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-row-start: 5;
+    text-align: center;
+    font-family:"Montserrat" ;
+    font-size: 1.5vh;
+    text-decoration: line-through;
+    color: rgb(194, 194, 194);
+}
+#row6{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-row-start: 6;
+    text-align: center;
+    font-family:"Montserrat" ;
+    font-size: 2vh;
+    color: #c982d1;
+}
+.buttoncatalog{
+    border: rgba(183, 119, 190, 0.6);
+    border-style:solid;
+    border-width: 0.2vh;
+    margin-top:50vh;
+    margin-left: 18vw;
+    display: grid;
+    grid-column-start: 1;
+    height: 6vh;
+    width: 50vw;
+    grid-template-columns:43vw 5vw;
+    cursor: pointer;
+}
+#catalogbtn{
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-size: 1.3vh;
+    padding-top: 2.3vh;
+    padding-left: 2vh;
+}
+.buttoncatalog:hover{
+border-width: 0.3vh;
+}
+.buttoncatalog:active{
+border-width: 0.3vh;
+background-color: rgba(183, 119, 190, 0.1);
+border-color: rgba(183, 119, 190, 0.6);
+}
+.Lifetime{
+height: 85vh;
+width: 100vw;
+background-image: url(/Image/Vector3.png);
+background-size:100vw 85vh;
+background-position: -15vh 0 0 0 ;
+display: grid;
+grid-template-columns: 15vw 33vw 20vw 15vw;
+grid-template-rows: 6vh 10vh  18vh 20vh 20vh ;
+}
+#life{
+display: grid;
+grid-column-start: 2;
+grid-column-end: 4;
+margin: 0;
+font-family:"Garamond";
+font-weight: normal;
+padding-top: 2vh;
+font-size: 4.5vh;
+padding-right: 5vw;
+grid-row-start: 1;
+}
+#moreyear{
+    display: grid;
+    grid-column-start:4 ;
+    grid-row-start: 1;
+}
+#degrees{
+    font-family: "MontserratL";
+    font-size: 1.8vh;
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-top: 1.5vh;
+    grid-row-start: 2;
+}
+#stonearea{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 50vh;
+    width: 30vw;
+    grid-row-start: 3;
+}
+#stoneglass{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    height: 45vh;
+    width: 30vw;
+    padding: 25vh 0vw 0vh 8vw;
+}
+#linetext{
+    height: 1vh;
+    width: 6vw;
+}
+#eco{
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-template-columns: 28vw;
+    grid-template-rows: 1.5vh 4vh 10vh;
+    font-family: "Montserrat";
+    font-size: 2vh;
+   
+}
+#newp{
+    margin: 0;
+    padding: 0;
+    font-size: 1.7vh;
+    color: #6A6A6A;
+}
+#wheather{
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start:4 ;
+    grid-template-columns: 28vw;
+    grid-template-rows: 1.5vh 6vh 10vh;
+    font-family: "Montserrat";
+    font-size: 2vh;
+}
+#easy{
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start:5 ;
+    grid-template-columns: 28vw;
+    grid-template-rows: 1.5vh 5vh 10vh;
+    font-family: "Montserrat";
+    font-size: 2vh;
+}
+.diler{
+   background-color: #F3F3F6;
+    height: 50vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 20vw 30vw 30vw 15vw;
+    grid-template-rows: 15vh 10vh 18vh;
+    padding-top: 4vh;
+}
+#hbuy{
+    letter-spacing: 0.03em;
+    display: grid;
+    grid-column: 2/4;
+    font-family:"Garamond";
+    font-size: 5vh;
+    font-weight:normal ;
+    text-align: center;
+}
+#nonep{
+    display: grid;
+    grid-column: 2/4;
+    grid-row: 2;
+    font-family: "Montserrat";
+    font-size: 2.3vh;
+    padding-top: 1vh;
+    text-align: center;
+}
+#addressdiler{
+    display: grid;
+    grid-column-start: 3;
+    background-color: #6A6A6A;
+    margin: 1.5vh 0.5vw 0 0;
+    height: 15vh;
+    width: 28vw;
+    border-style: solid;
+    border-width: 0.1vh;
+    font-family: "MontserratL";
+    background-color: rgba(247, 236, 248, 0.1);
+    border-color: rgba(183, 119, 190, 0.6);
+    grid-template-columns: 3vw 6vw 18vw;
+    grid-template-rows: auto;
+    font-size: 2.5vh;
+}
+#whantdiler{
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    background-color: #6A6A6A;
+    margin: 1.5vh 0 0 0.5vw;
+    height: 15vh;
+    width: 28vw;
+    border-style: solid;
+    border-width: 0.1vh;
+    font-family: "MontserratL";
+    background-color: rgba(247, 236, 248, 0.1);
+    border-color: rgba(183, 119, 190, 0.6);
+    grid-template-columns: 4vw 9vw 12vw;
+    grid-template-rows: auto;
+    font-size: 2.5vh;
+}   
+#car{
+    display: grid;
+    grid-column-start: 2;
+    padding-top: 4.2vh;
+    height: 7.5vh;
+}
+#world{
+    display: grid;
+    grid-column-start: 2;
+    padding-top: 3vh;
+    height: 8.5vh;
+}
+#txt{
+    padding-top: 2vh;
+}
+#whantdiler:hover{
+    border-width: 0.3vh;
+}
+#addressdiler:hover{
+    border-width: 0.3vh;
+}
+#addressdiler:active{
+    border-width: 0.3vh;
+    background-color: rgba(183, 119, 190, 0.1);
+    border-color: rgba(183, 119, 190, 0.6);
+}
+#whantdiler:active{
+    border-width: 0.3vh;
+    background-color: rgba(183, 119, 190, 0.1);
+    border-color: rgba(182, 100, 191, 0.6);
+}
+.video{
+    display: grid;
+    height: 90vh;
+    width: 60vw;
+    grid-template-rows: 15vh 10vh 65vh ;
+    grid-template-columns: 6.5vw 47vw 6.5vw;
+    margin: 5vh 20vw 0 20vw;
+}
+#unique{
+    font-family: "Garamond";
+    font-weight: normal;
+    font-size: 5vh;
+    text-align: center;
+    display: grid;
+    grid-column-start: 2;
+    letter-spacing: 0.03em;
+}
+#everyyear{
+  font-family: "MontserratL";
+  font-size: 2.5vh; 
+  display: grid;
+  grid-column-start: 2; 
+  text-align: center;
+  padding: 0;
+}
+.content{
+    display: grid;
+    grid-column: 1/3;
+    width: 60vw;
+    height: 60vh;
+}
+#video{
+    width: 60vw;
+    height: 60vh;
+}
+#textonimg{
+    color: #ffffff;
+    display: grid;
+}
+.close {
+    color: #ffffff;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-size: 8vh;
+    font-weight: bold;
+    cursor: pointer;
+    display: grid;
+    grid-column-start: 2;
+}
+.play {
+    cursor: pointer;
+    height: 8vh;
+    width: 6vw;
+    grid-area: 3/2;
+    align-self: center;
+    justify-self: center;
+  }
+#player {
+    width: 60vw; 
+    height: 60vh; 
+}
+.overlay {
+    display: none;
+    grid-template-rows: 10vh 50vh;
+    grid-template-columns: 55vw 5vw;
+}
+#imgvideo{
+    height: 60vh;
+    width: 60vw;
+}
+.container {
+    display: grid;
+    grid-row-start: 3;
+    grid-column: 1/3;
+    height: 60vh;
+    width: 60vw;
+    grid-template-rows: 17.5vh 5vh 15vh 5vh 17.5vh;
+    grid-template-columns: 15vw 30vw 15vw;
+}
+#timevideo{
+    color: #ffffff;
+    grid-area: 4/2;
+    font-family: "MontserratL";
+    font-size: 1.5vh;
+    text-align: center;
+}
+#whatch{
+    color: #ffffff;
+    grid-area: 2/2;
+    font-family: "MontserratL";
+    font-size: 2vh;
+    text-align: center;
+}
+.record{
+    height: 40vh;
+    width:66vw;
+
+    margin: 15vh 0 0 17vw;
+    display: grid;
+    grid-template-columns: 30vw 3vw 33vw;
+    grid-template-rows: 20vh 20vh;
+}
+#visit{
+  font-family: "MontserratL";
+  font-size: 2.5vh; 
+  display: grid;
+  grid-column-start: 1; 
+  padding: 3vh 0 0 0; 
+}
+#progress{
+    display: grid;
+    grid-column-start: 3;
+    width: 33vw;
+    height:33vh;
+}
+#btn{
+    background: linear-gradient(265.97deg, #c982d1 -9.18%, #88488F 103.05%);
+    display: grid;
+    grid-column-start: 1;
+    height: 6vh;
+    width: 11vw;
+    grid-template-columns:9vw 2vw;
+    cursor: pointer;
+}
+#btn:hover{
+    background: linear-gradient(265.97deg,#88488F -9.18%, #c982d1 103.05%);
+}
+#btn:active{
+    background: #88488F;
+}
+#recarr{
+    grid-column-start: 2;
+    padding-top: 2vh;
+    height: 2vh;
+   }
+#recording{
+   color:white;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   font-family: "Montserrat";
+   font-size: 1.3vh;
+   padding-top: 1vh;
+   padding-left: 3.5vh;
 }
 }
