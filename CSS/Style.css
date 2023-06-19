@@ -1050,9 +1050,7 @@ a{ color: black;
     #description{
         display: none;
     }
-    #button{
-        display: none;
-    }
+   
     #diler{
         display: grid;
         grid-column-start: 1;
@@ -1069,7 +1067,7 @@ a{ color: black;
         grid-column-start: 1;
         height: 6vh;
         width: 50vw;
-        grid-template-columns:45vw 5vw;
+        grid-template-columns:42vw 8vw;
         cursor: pointer;
     }
     #arrow{
@@ -1082,9 +1080,9 @@ a{ color: black;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         font-family: "Montserrat";
-        font-size: 1.5vh;
+        font-size: 1.3vh;
         padding-top: 2.3vh;
-        padding-left: 2vw;
+        padding-left: 2.2vw;
     }
     #button:hover{
         background: linear-gradient(265.97deg,#88488F -9.18%, #c982d1 103.05%);
@@ -1149,6 +1147,7 @@ a{ color: black;
 #foto{
     display: grid;
 grid-row: 3;}
+
 #imginterior{
     height: 15vh;
     width: 12.5vw;
@@ -1170,6 +1169,7 @@ grid-row: 3;}
 #kindsalways{
     display: grid;
     width: 100vw;
+    height: 100vh;
     grid-template-columns: 10vw 80vw;
     grid-template-rows: 20vh 10vh 10vh 10vh; 
 
@@ -1195,9 +1195,12 @@ grid-row: 3;}
 }
 #glass{
     display: grid;
-    grid-row: 3;
-    background-image: url(/Image/glass.png);
-    background-size: 100% 100%;
+    grid-row-start: 3;
+}
+#glassimg{
+
+    height: 32vh;
+    width: 90vw;
 }
 .cards{ 
     margin-top: 70vh;
@@ -1332,74 +1335,65 @@ background-color: rgba(183, 119, 190, 0.1);
 border-color: rgba(183, 119, 190, 0.6);
 }
 .Lifetime{
-height: 85vh;
-width: 100vw;
-background-image: url(/Image/Vector3.png);
-background-size:100vw 85vh;
-background-position: -15vh 0 0 0 ;
-display: grid;
-grid-template-columns: 15vw 33vw 20vw 15vw;
-grid-template-rows: 6vh 10vh  18vh 20vh 20vh ;
+    height: 150vh;
+    width: 100vw;
+    display: grid;
+
+    grid-template-rows: 20vh 10vh  15vh 17vh 18vh 30vh 20vh;
 }
 #life{
-display: grid;
-grid-column-start: 2;
-grid-column-end: 4;
-margin: 0;
-font-family:"Garamond";
-font-weight: normal;
-padding-top: 2vh;
-font-size: 4.5vh;
-padding-right: 5vw;
-grid-row-start: 1;
+    display: grid;
+    margin: 0;
+    font-family:"Garamond";
+    font-weight: normal;
+    padding-top: 2vh;
+    font-size: 4.5vh;
+    padding-right: 5vw;
+    grid-row-start: 1;
+    text-align: center;
+    width: 80vw;
+    padding-left: 10vw;
 }
 #moreyear{
-    display: grid;
-    grid-column-start:4 ;
-    grid-row-start: 1;
+    display: none;
 }
 #degrees{
     font-family: "MontserratL";
     font-size: 1.8vh;
     display: grid;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    padding-top: 1.5vh;
     grid-row-start: 2;
+    text-align: center;
+    width: 80vw;
+    padding-left: 10vw;
 }
 #stonearea{
     display: grid;
-    grid-column-start: 2;
-    grid-column-end: 3;
     height: 50vh;
-    width: 30vw;
-    grid-row-start: 3;
+    width: 80vw;
+    grid-row-start: 6;
+    padding-left: 10vw;
 }
 #stoneglass{
     display: grid;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    height: 45vh;
-    width: 30vw;
-    padding: 25vh 0vw 0vh 8vw;
-}
-#linetext{
+    grid-row-start: 7;
+    height: 35vh;
+    width: 65vw;
+    margin: 0 0 0 20vh;
+}#linetext{
     height: 1vh;
-    width: 6vw;
-}
-#eco{
+    width: 20vw;
+    padding-left: 30vw;
+}#eco{
     display: grid;
-    grid-column-start: 3;
-    grid-column-end: 5;
+    width: 80vw;
     grid-row-start: 3;
-    grid-template-columns: 28vw;
     grid-template-rows: 1.5vh 4vh 10vh;
     font-family: "Montserrat";
     font-size: 2vh;
+    text-align: center;
+    padding-left: 10vw;
    
-}
-#newp{
+}#newp{
     margin: 0;
     padding: 0;
     font-size: 1.7vh;
@@ -1407,31 +1401,31 @@ grid-row-start: 1;
 }
 #wheather{
     display: grid;
-    grid-column-start: 3;
-    grid-column-end: 5;
+    padding-left: 10vw;
     grid-row-start:4 ;
-    grid-template-columns: 28vw;
+    width: 80vw;
     grid-template-rows: 1.5vh 6vh 10vh;
     font-family: "Montserrat";
     font-size: 2vh;
+    text-align: center;
 }
 #easy{
     display: grid;
-    grid-column-start: 3;
-    grid-column-end: 5;
+    width: 80vw;
     grid-row-start:5 ;
-    grid-template-columns: 28vw;
     grid-template-rows: 1.5vh 5vh 10vh;
     font-family: "Montserrat";
     font-size: 2vh;
+    text-align: center;
+    padding-left: 10vw;
 }
 .diler{
    background-color: #F3F3F6;
-    height: 50vh;
+    height: 80vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 20vw 30vw 30vw 15vw;
-    grid-template-rows: 15vh 10vh 18vh;
+    grid-template-columns: 10vw 40vw 40vw 10vw;
+    grid-template-rows: 25vh 12vh 20vh 20vh;
     padding-top: 4vh;
 }
 #hbuy{
@@ -1439,7 +1433,7 @@ grid-row-start: 1;
     display: grid;
     grid-column: 2/4;
     font-family:"Garamond";
-    font-size: 5vh;
+    font-size: 4vh;
     font-weight:normal ;
     text-align: center;
 }
@@ -1454,48 +1448,52 @@ grid-row-start: 1;
 }
 #addressdiler{
     display: grid;
-    grid-column-start: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
     background-color: #6A6A6A;
-    margin: 1.5vh 0.5vw 0 0;
-    height: 15vh;
-    width: 28vw;
+    margin: 1vh 0.5vw 0 0;
+    height: 14vh;
+    width: 80vw;
     border-style: solid;
     border-width: 0.1vh;
     font-family: "MontserratL";
     background-color: rgba(247, 236, 248, 0.1);
     border-color: rgba(183, 119, 190, 0.6);
-    grid-template-columns: 3vw 6vw 18vw;
+    grid-template-columns: 8vw 25vw 47vw;
     grid-template-rows: auto;
-    font-size: 2.5vh;
+    font-size: 2vh;
+    grid-row: 4;
 }
 #whantdiler{
     display: grid;
     grid-column-start: 2;
-    grid-row-start: 3;
+    grid-column-end: 3;
+    grid-row: 3;
     background-color: #6A6A6A;
-    margin: 1.5vh 0 0 0.5vw;
-    height: 15vh;
-    width: 28vw;
+    margin: 1vh 0 0 0.5vw;
+    height: 14vh;
+    width: 80vw;
     border-style: solid;
     border-width: 0.1vh;
     font-family: "MontserratL";
     background-color: rgba(247, 236, 248, 0.1);
     border-color: rgba(183, 119, 190, 0.6);
-    grid-template-columns: 4vw 9vw 12vw;
+    grid-template-columns: 8vw 28vw 44vw;
     grid-template-rows: auto;
-    font-size: 2.5vh;
+    font-size: 2vh;
 }   
 #car{
     display: grid;
     grid-column-start: 2;
     padding-top: 4.2vh;
-    height: 7.5vh;
+    height: 6vh;
 }
 #world{
     display: grid;
     grid-column-start: 2;
-    padding-top: 3vh;
-    height: 8.5vh;
+    padding-top: 3.5vh;
+    height: 6.5vh;
+    padding-left: 3.5vw;
 }
 #txt{
     padding-top: 2vh;
@@ -1519,36 +1517,38 @@ grid-row-start: 1;
 .video{
     display: grid;
     height: 90vh;
-    width: 60vw;
-    grid-template-rows: 15vh 10vh 65vh ;
-    grid-template-columns: 6.5vw 47vw 6.5vw;
-    margin: 5vh 20vw 0 20vw;
+    width: 100vw;
+    grid-template-rows: 20vh 15vh 65vh ;
+    grid-template-columns: auto;
+    margin: 5vh 0 0 0vw;
 }
 #unique{
     font-family: "Garamond";
     font-weight: normal;
-    font-size: 5vh;
+    font-size: 4vh;
     text-align: center;
     display: grid;
-    grid-column-start: 2;
     letter-spacing: 0.03em;
+    grid-row: 1;
+    padding: 0 5vw 0 5vw;
 }
 #everyyear{
   font-family: "MontserratL";
-  font-size: 2.5vh; 
+  font-size: 2vh; 
   display: grid;
-  grid-column-start: 2; 
   text-align: center;
   padding: 0;
+  grid-row: 2;
+  padding: 0 5vw 0 5vw;
 }
 .content{
     display: grid;
     grid-column: 1/3;
-    width: 60vw;
+    width: 100vw;
     height: 60vh;
 }
 #video{
-    width: 60vw;
+    width: 100vw;
     height: 60vh;
 }
 #textonimg{
@@ -1564,37 +1564,38 @@ grid-row-start: 1;
     font-weight: bold;
     cursor: pointer;
     display: grid;
-    grid-column-start: 2;
+    grid-column-start: 3;
 }
 .play {
     cursor: pointer;
     height: 8vh;
-    width: 6vw;
+    width: 25vw;
     grid-area: 3/2;
     align-self: center;
     justify-self: center;
   }
 #player {
-    width: 60vw; 
+    width: 100vw; 
     height: 60vh; 
 }
 .overlay {
     display: none;
     grid-template-rows: 10vh 50vh;
-    grid-template-columns: 55vw 5vw;
+    grid-template-columns: 82vw 3vw;
 }
 #imgvideo{
     height: 60vh;
-    width: 60vw;
+    width: 100vw;
 }
 .container {
     display: grid;
     grid-row-start: 3;
-    grid-column: 1/3;
+   
     height: 60vh;
-    width: 60vw;
-    grid-template-rows: 17.5vh 5vh 15vh 5vh 17.5vh;
-    grid-template-columns: 15vw 30vw 15vw;
+    width: 100vw;
+    grid-template-rows: 14.5vh 10vh 15vh 5vh 17.5vh;
+    grid-template-columns: 10vw 80vw 10vw;
+    grid-row: 3;
 }
 #timevideo{
     color: #ffffff;
@@ -1611,35 +1612,34 @@ grid-row-start: 1;
     text-align: center;
 }
 .record{
-    height: 40vh;
-    width:66vw;
-
-    margin: 15vh 0 0 17vw;
+    height: 70vh;
+    width: 80vw;
+    margin: 15vh 10vw 0 10vw;
     display: grid;
-    grid-template-columns: 30vw 3vw 33vw;
-    grid-template-rows: 20vh 20vh;
+    grid-template-rows: 33vh 12vh 25vh;
 }
 #visit{
   font-family: "MontserratL";
-  font-size: 2.5vh; 
+  font-size: 3vh; 
   display: grid;
-  grid-column-start: 1; 
+text-align: center;
   padding: 3vh 0 0 0; 
 }
 #progress{
     display: grid;
-    grid-column-start: 3;
-    width: 33vw;
-    height:33vh;
+
+    width: 80vw;
+    height:25vh;
 }
 #btn{
     background: linear-gradient(265.97deg, #c982d1 -9.18%, #88488F 103.05%);
     display: grid;
-    grid-column-start: 1;
+    grid-row-start: 2;
     height: 6vh;
-    width: 11vw;
-    grid-template-columns:9vw 2vw;
+    width: 50vw;
+    grid-template-columns:40vw 10vw;
     cursor: pointer;
+    margin: 3vh 0 0 15vw;
 }
 #btn:hover{
     background: linear-gradient(265.97deg,#88488F -9.18%, #c982d1 103.05%);
