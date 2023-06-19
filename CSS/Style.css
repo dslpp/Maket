@@ -861,7 +861,7 @@ a{ color: black;
 }
 #mapimg{
     grid-row: 5;
-    height: 20vh;
+    height: 25vh;
     width: 30vw;
     padding: 5vh 0 0 2vw;
 }
