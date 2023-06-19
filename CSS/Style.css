@@ -408,7 +408,7 @@ a{ color: black;
     #glass{
         display: grid;
         grid-column-start: 3;
-        background-image: url(/Image/glass.png);
+        background-image: url(Image/glass.png);
         background-size: 100% 100%;
     }
     .cards{ 
@@ -1195,12 +1195,18 @@ grid-row: 3;}
 }
 #glass{
     display: grid;
+<<<<<<< HEAD
     grid-row-start: 3;
 }
 #glassimg{
 
     height: 32vh;
     width: 90vw;
+=======
+    grid-row: 3;
+    background-image: url(Image/glass.png);
+    background-size: 100% 100%;
+>>>>>>> b5156aba81a683c41c31d05447607eca01fe940c
 }
 .cards{ 
     margin-top: 70vh;
