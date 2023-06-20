@@ -126,7 +126,8 @@ a{ color: black;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
+.dropdown-content a:hover {background-color: #ddd
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
@@ -151,6 +152,7 @@ a{ color: black;
     width: 35px;
     height: 35px;
     animation: preloader-bounce 2s infinite ease-in-out;
+    z-index: 2;
   }
   
   .preloader__item:last-child {
