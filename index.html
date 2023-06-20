@@ -18,8 +18,6 @@
           <div class="preloader__item"></div>
         </div>
       </div>
-     
-     
     <div  id="grid-container" class="grid-container">
         <script src="Script/smooth.js"></script>
             <div class="header">
@@ -30,7 +28,18 @@
                     </div>
                    <div id="logodiv"><img  id="logo" src="Image/logo.svg"></div>
                     <div class="menu">
-                        <a id="a" href="#">КАТАЛОГ</a>
+                        
+                     
+                        <a href="#" onclick="myFunction()" class="dropbtn">КАТАЛОГ</a>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#">Необработанные стеклянные камни (эрклёз)</a>
+                            <a href="#">Обработанные стеклянные камни</a>
+                            <a href="#">Стеклянные шарики</a>
+                            <a href="#">Стеклянная щебенка</a>
+                            <a href="#">Кварцевые камни для бань  и саун</a>
+                            <a href="#">Сувениры из стекла</a>
+                        </div>
+                        <script src="Script/drop.js"></script>
                         <a href="#">ДИЛЕРАМ</a>
                         <a href="#">ИДЕИ</a>
                         <a href="#">О КОМПАНИИ</a>
@@ -93,9 +102,7 @@
                     <div class="city"><img  id="place" src="Image/placeholder.svg">
                         <i>Москва</i>
                     </div>  
-                    
             </div>
-         
             <div class="banner">
                 <text id="textstone">Стеклянные камни<p id="diler">оптом от производителя</p>
                     <div id="description">
@@ -114,19 +121,36 @@
                 <img id="glassstone" src="Image/glassstone.png">
             </div>
             <div class="filter">
-                <div class="interior">
+                <div class="gallery-container">
+                
+                    <div id="slideshow">
+                      <img src="Image/foto.png" alt="Image 1" class="active">
+                      <img src="Image/foto.png" alt="Image 2">
+                      <img src="Image/foto.png" alt="Image 3">
+                      <img src="Image/foto.png" alt="Image 4">
+                      <img src="Image/foto.png" alt="Image 5">
+                      <img src="Image/foto.png" alt="Image 6">
+                    </div>
                     <div id="newimage">
                         <h1 id="newtrand">Новый тренд в интерьере и ландшафтном дизайне</h1> 
                         <p id="home">
                             Создавайте уникальную атмосферу в своём доме и саду
                         </p>
-                    <img id="imginterior" src="Image/foto.png">
-                    </div>
-                    <div id="foto">
-                        <img  id="photo" src="Image/foto.png" >
+                    <div id="thumbnail-gallery">
+                      <img  src="Image/foto.png" alt="Image 1" class="thumbnail active">
+                      <img id="#img12"src="Image/foto.png" alt="Image 2" class="thumbnail">
+                      <img id="#img13" src="Image/foto.png" alt="Image 3" class="thumbnail">
+                      <img id="#img21" src="Image/foto.png" alt="Image 4" class="thumbnail active">
+                      <img id="#img22"src="Image/foto.png" alt="Image 5" class="thumbnail">
+                      <img id="#img23" src="Image/foto.png" alt="Image 6" class="thumbnail">
                     </div>
                 </div>
+                  </div>
+                  <script src="Script/show.js"></script>
+                
             </div>
+            <div class="btn-up btn-up_hide"></div>
+            <script src="Script/up.js"></script>
                 <div class="kinds">
                     <div id="kindsalways">
                         <h1 id="kindstext"> Более 100 видов стекла всегда в наличии</h1>

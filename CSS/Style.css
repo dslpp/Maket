@@ -95,7 +95,41 @@ a{ color: black;
     background: #e0e0e0;
     z-index: 100rgb(255, 255, 255)
   }
-  
+  /* Dropdown Button */
+.dropbtn {
+    color: black;
+        font-family: "Montserrat";
+        text-decoration: none;
+        -webkit-user-drag: none;
+        grid-column-start: 2 ;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    grid-column-start: 2 ;
+    z-index: 1;
+    margin-top:1.3vw ;
+   
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.8vw;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
   .preloader__row {
     position: relative;
     top: 50%;
@@ -153,7 +187,96 @@ a{ color: black;
   }
 
 @media (min-width: 1366px) {
+    .gallery-container {
+        display: grid;
+        grid-template-columns: 45vw 55vw;
+        height: 70vh;
+        margin-top: 5vw;
+      }
   
+      #slideshow {
+        position: relative;
+        height: 70vh;
+        width: 55vw;
+        overflow: hidden;
+        grid-column: 2;
+        float: right;
+      }
+  
+      #slideshow img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      #slideshow img.active {
+        opacity: 1;
+      }
+      #thumbnail-gallery {
+      display: grid; /* Регулируйте высоту под свои нужды */
+        overflow: auto;
+        grid-row: 3;
+        grid-column-start: 1;
+        grid-template-columns: 12.5vw 12.5vw 12.5vw;
+        grid-template-rows: 8.5vw 8.5vw;
+      }
+      #thumbnail-gallery img {
+        display: grid;
+        height:7vw;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      #img12{
+        grid-column: 2;
+      }
+      #img13{
+        grid-column: 3;
+      }
+      #img21{
+        grid-row: 2;
+        grid-column: 1;
+      }
+      #img21{
+        grid-row: 2;
+        grid-column: 2;
+      }
+      #img21{
+        grid-row: 2;
+        grid-column: 3;
+      }
+      #thumbnail-gallery img.active {
+        border: 2px solid rgb(0, 0, 0); /* Стиль активной миниатюры */
+      }
+
+    .btn-up {
+        position: fixed;
+
+        right: 20px;
+        bottom: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 6vw;
+        height: 50px;
+      }
+      
+      .btn-up::before {
+        content: "";
+        height: 2vw;
+        width: 4vw;
+        background: transparent no-repeat center center;
+        background-size: 100% 100%;
+        background-image: url(/Image/up.png);
+      }
+
+      .btn-up_hide {
+        display: none;
+      }
+      
     .kinds{
         grid-area:D;
       }
@@ -395,6 +518,7 @@ a{ color: black;
         grid-template-columns: auto;
         grid-template-rows: 15vh 15vh 40vh;
         padding-left: 7vw;
+        grid-row: 1;
     }
     #newtrand{
         margin: 0;
@@ -425,7 +549,7 @@ a{ color: black;
     }
     .kinds{ background-image: url(../Image/filter.png);
         background-size: 100% 110%;
-        height: 60vh;
+        height: 74vh;
         display: grid;
         grid-template-columns: 27vw 15vw 40vw;
         margin-top: 10vh;
@@ -974,8 +1098,72 @@ grid-column-start: 2;
 }
 }
 @media (min-width:320px) and (max-width:1366px) {
-   
+    .gallery-container {
+        display: grid;
+        grid-template-rows: 45vw 55vw;
+        height: 100vw;
+        margin-top: 5vw;
+      }
+  
+      #slideshow {
+        position: relative;
+        width: 100vw;
+        overflow: hidden;
+        grid-row: 2;
+        float: right;
+      }
+  
+      #slideshow img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    
+      }
+      #slideshow img.active {
+        opacity: 1;
+      }
+      #thumbnail-gallery {
+      display: grid; /* Регулируйте высоту под свои нужды */
+        overflow: auto;
+        grid-row: 3;
+        grid-column-start: 1;
+        grid-template-columns: 12.5vw 12.5vw 12.5vw;
+        grid-template-rows: 8.5vw 8.5vw;
+        display: none;
+      }
+      #thumbnail-gallery img {
+        display: grid;
+        height:7vw;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      #img12{
+        grid-column: 2;
+      }
+      #img13{
+        grid-column: 3;
+      }
+      #img21{
+        grid-row: 2;
+        grid-column: 1;
+      }
+      #img21{
+        grid-row: 2;
+        grid-column: 2;
+      }
+      #img21{
+        grid-row: 2;
+        grid-column: 3;
+      }
+      #thumbnail-gallery img.active {
+        border: 2px solid rgb(0, 0, 0); /* Стиль активной миниатюры */
+      }
 
+    .btn-up btn-up_hide{
+        display: none;
+    }
     .kinds{
       grid-area:D;
     }
