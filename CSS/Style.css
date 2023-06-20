@@ -63,9 +63,9 @@ a{ color: black;
                          "H H"/*8*/
                          "I I"/*9*/
                          "J J"/*10*/
-                         "K K"
-                         "L L"
-                         "M M";/*11*/
+                         "K K"/*11*/
+                         "L L"/*12*/
+                         "M M";/*13*/
 
     overflow-x: hidden;
     position: relative;
@@ -573,6 +573,7 @@ a{ color: black;
         width: 13vw;
         grid-template-columns:11vw 2vw;
         cursor: pointer;
+        box-sizing: border-box;
     }
     #catalogbtn{
         letter-spacing: 0.1em;
@@ -726,6 +727,7 @@ a{ color: black;
         grid-template-columns: 3vw 6vw 18vw;
         grid-template-rows: auto;
         font-size: 2.5vh;
+        box-sizing: border-box;
     }
     #whantdiler{
         display: grid;
@@ -743,6 +745,7 @@ a{ color: black;
         grid-template-columns: 4vw 9vw 12vw;
         grid-template-rows: auto;
         font-size: 2.5vh;
+        box-sizing: border-box;
     }   
     #car{
         display: grid;
@@ -1422,6 +1425,7 @@ padding-left: 20vw;
     width: 50vw;
     grid-template-columns:42vw 8vw;
     cursor: pointer;
+    box-sizing: border-box;
 }
 #catalogbtn{
     letter-spacing: 0.05em;
@@ -1564,6 +1568,7 @@ border-color: rgba(183, 119, 190, 0.6);
     grid-template-columns: 4vw 15vw 49vw;
     font-size:3.5vw;
     grid-row: 5;  
+    box-sizing: border-box;
 }
 #whantdiler{
     display: grid;
@@ -1580,6 +1585,7 @@ border-color: rgba(183, 119, 190, 0.6);
     border-color: rgba(183, 119, 190, 0.6);
     grid-template-columns: 4vw 15vw 49vw;
     font-size: 3.5vw;
+    box-sizing: border-box
 }   
 #car{
     display: grid;
